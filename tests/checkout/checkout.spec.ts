@@ -44,13 +44,7 @@ test.describe("Checkout challenge", async () => {
         await page.locator('[data-test="finish"]').click();
         await expect(page.locator('.help-block')).toHaveText('Payment was successful');
         
-        /*headless
-            ? await test.step('visual test', async () => {
-                await expect(page).toHaveScreenshot("checkout-chromium-win32-chromium-win32.png", {
-                    mask: [page.getByTitle('Practice Software Testing - Toolshop')]
-                });
-            })
-            : console.log("Running in headed mode");      */
+       
     });
 });
 
