@@ -3,14 +3,14 @@ import { test as setup, expect } from '@playwright/test';
 /* This is added in order to save some lines of code by saving a user session in a cookie, meaning for eavery test we execute we don't have to take into consideration
 the login flow*/
 
-setup("Create curstomer 01 auth", async ({ page, context}) => {
+setup("Create customer 01 auth", async ({ page, context}) => {
     const email = "customer@practicesoftwaretesting.com";
     const password = "welcome01"
     const customer01authFile = ".auth/customer01.json"
     //Open website
     await page.goto("https://practicesoftwaretesting.com/auth/login")
     //fill email
-    await page.locator('[data-test="email"]').fill(email);
+    await page.locator('[data-test="email"]').fill(email, { timeout: 60000 });
     // fill password
     await page.locator('[data-test="password"]').fill(password);
     //click submit
