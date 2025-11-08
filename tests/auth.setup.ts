@@ -8,7 +8,7 @@ setup("Create customer 01 auth", async ({ page, context}) => {
     const password = "welcome01"
     const customer01authFile = ".auth/customer01.json"
     //Open website
-    await page.goto("https://practicesoftwaretesting.com/auth/login", {waitUntil: 'networkidle'})
+    await page.goto("https://practicesoftwaretesting.com/auth/login")
     //fill email
     //await page.waitForSelector('[data-test="email"]', { state: 'visible' });
     await page.locator('[data-test="email"]').fill(email);
