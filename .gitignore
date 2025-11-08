@@ -7,6 +7,8 @@ node_modules/
 /playwright/.cache/
 .auth/
 .env
+storageState.json
+
 
 # Playwright
 #/playwright/.auth/
