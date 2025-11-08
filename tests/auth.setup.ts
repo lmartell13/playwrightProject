@@ -10,7 +10,8 @@ setup("Create customer 01 auth", async ({ page, context}) => {
     //Open website
     await page.goto("https://practicesoftwaretesting.com/auth/login")
     //fill email
-    await page.locator('[data-test="email"]').fill(email, { timeout: 60000 });
+    await page.waitForSelector('[data-test="email"]', { state: 'visible' });
+    await page.locator('[data-test="email"]').fill(email);
     // fill password
     await page.locator('[data-test="password"]').fill(password);
     //click submit
