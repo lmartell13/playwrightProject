@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe("Checkout challenge", async () => {
     //Calling the user session
-    test.use({ storageState: ".auth/customer01.json"});
+    test.use({ storageState: "storageState.json"});
  
     test.beforeEach(async ({page}) => {
         //First action performed before each test - Open the website
