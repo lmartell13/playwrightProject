@@ -17,6 +17,7 @@ setup("Create customer 01 auth", async ({ page, context}) => {
     //click submit
     await page.locator('[data-test="login-submit"]').click();
     //Validate login
+    await page.waitForTimeout(1000);
     await expect(page.locator('[data-test="nav-menu"]')).toContainText('Jane Doe');
     //Store the session
     await context.storageState({path: customer01authFile});
