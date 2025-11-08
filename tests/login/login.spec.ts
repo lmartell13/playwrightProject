@@ -33,5 +33,6 @@ test("Login with page object", async ({page}) => {
   */
  
   //Validate login was successful by locating two elements only logged in users are able to see
+  await page.waitForTimeout(2000);
   await expect(page.locator('[data-test="nav-menu"]')).toContainText('Jane Doe');
 });
