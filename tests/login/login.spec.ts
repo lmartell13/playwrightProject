@@ -14,7 +14,7 @@ test('logintest without page object', async ({ page }) => {
   await page.locator('[data-test="login-submit"]').click();
   
   //Validate login was successful by locating two elements only logged in users are able to see
-  await page.waitForTimeout(1000);
+  await page.waitForTimeout(2000);
   await expect(page.locator('[data-test="nav-menu"]')).toContainText('Jane Doe');
   await expect(page.locator('[data-test="page-title"]')).toContainText('My account');
 });
@@ -34,6 +34,6 @@ test("Login with page object", async ({page}) => {
   */
  
   //Validate login was successful by locating two elements only logged in users are able to see
-  await page.waitForTimeout(1000);
+  await page.waitForTimeout(2000);
   await expect(page.locator('[data-test="nav-menu"]')).toContainText('Jane Doe');
 });
