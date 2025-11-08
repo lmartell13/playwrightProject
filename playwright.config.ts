@@ -10,7 +10,7 @@ export default defineConfig({
   retries: 0,
   workers: 1,
 
-  reporter: [['html'], ['line']],
+  reporter: [['html', { open: 'always' }], ['line']],
 
   use: {
     baseURL: process.env.URL ?? 'https://practicesoftwaretesting.com',
