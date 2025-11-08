@@ -8,4 +8,4 @@ node_modules/
 .auth/
 
 # Playwright
-/playwright/.auth/
+#/playwright/.auth/
