@@ -1,5 +1,6 @@
 import { type Locator, type Page} from "@playwright/test";
 
+//Class to store the form fields 
 export class LoginPage {
     readonly page: Page;
     readonly emailInput: Locator;
@@ -12,10 +13,11 @@ export class LoginPage {
         this.loginButton = page.locator('[data-test="login-submit"]')
     }
 
+    //Opening the login page of the website
     async goto(){
         await this.page.goto(process.env.URL + "/auth/login");
     }
-
+    //Fill the fields with the values received as parameters
     async login(email: string, password: string){
         await this.emailInput.fill(email);
         await this.passwordInput.fill(password);
